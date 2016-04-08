@@ -1,0 +1,6 @@
+name: TakeNoDamage
+main: TakeNoDamage\Main
+version: 0.1_Beta
+api: [1.12.0]
+author: Syntaxious
+description: Players do not take damage by anything!
