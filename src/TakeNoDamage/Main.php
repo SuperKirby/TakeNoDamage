@@ -15,9 +15,9 @@ public function onDisable() {
     $this->getlogger()->info("Take no damage enabled!");       
     }
     
-public function onDamage(EntityDamageEvent $ev) {
+public function onDamage(EntityDamageEvent $event) {
   if($event->getCause() === EntityDamageEvent::CAUSE_FALL){
-    $ev->setCancelled();
+    $event->setCancelled();
     }
       
 }
