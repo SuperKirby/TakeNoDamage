@@ -16,7 +16,7 @@ public function onDisable() {
     }
     
 public function onDamage(EntityDamageEvent $event) {
-  if($event->getCause() === EntityDamageEvent::CAUSE_FALL){
+  if($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
     $event->setCancelled();
     }
       
