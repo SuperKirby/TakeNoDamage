@@ -19,5 +19,10 @@ public function onDamage(EntityDamageEvent $event) {
   if($event->getCause() === EntityDamageEvent::CAUSE_FALL) {
     $event->setCancelled();
     }
-      
+   if($event->getCause() === EntityDamageEvent::CAUSE_LAVA) {
+    $event->setCancelled();
+    }
+      if($event->getCause() === EntityDamageEvent::CAUSE_CONTACT) {
+    $event->setCancelled();
+    }
 }
