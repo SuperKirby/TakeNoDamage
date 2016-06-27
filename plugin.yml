@@ -1,6 +1,26 @@
 name: TakeNoDamage
 main: TakeNoDamage\Main
-version: 0.1_Beta
+version: 2.0_Beta
 api: [1.12.0]
-author: Syntaxious
+author: Syntaxious, SuperKirby
 description: Players do not take damage by anything!
+commands:
+ tnd:
+  description: "Take Damage for a certain player"
+  usage: "/tnd [player]"
+  permission: tnd.toggle
+permissions:
+  tnd:
+    description: "FULL ACCESS TO TAKENODAMAGE"
+    default: false
+    children:
+      tnd.toggle:
+        description: "Toggle Damage"
+        default: false
+        children:
+          tmd.toggle.self:
+            description: "Allow damage to not occur to them self"
+            default: op
+          tnd.toggle.others:
+            description: "You can make sure no other players take no damage"
+            default: op
